@@ -85,12 +85,21 @@ button {
   background-color: #344cad;
 }
 .menu-nav {
-  display: flex;
-  align-items: center;
-  visibility: hidden;
+  display: none;
+  position: fixed;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 30px;
+  height: 100vh;
+  top: 0px;
+  left: 0;
+  padding: 0 70px;
+  padding-top: 40px;
+  background-color: white;
+  flex-direction: column;
   cursor: pointer;
 }
+
 .menu-btn {
   background: transparent;
   padding: 10px 20px;
@@ -104,6 +113,7 @@ button {
   border: 4px solid lightblue;
   padding: 10px;
   border-radius: 20px;
+  display: none;
 }
 .show {
   background-color: transparent;
@@ -665,9 +675,7 @@ li:hover {
 .fblink {
   cursor: pointer;
 }
-.hide {
-  visibility: hidden;
-}
+
 @media (max-width: 1068px) {
   .container {
     padding-inline: 20px;
@@ -717,15 +725,9 @@ li:hover {
     display: none;
   }
   .hide {
-    visibility: visible;
+    display: flex;
   }
 
-  .menu-nav {
-    visibility: hidden;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
   .para {
     font-size: 15px;
   }
